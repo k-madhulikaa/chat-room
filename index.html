@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reliable Chat Room</title>
+
+    <meta name="description" content="Reliable Chat Room using HTML, CSS and JavaScript with ordered messaging and offline support.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loginPage" class="login">
+    <h2>Welcome Back</h2>
+    <p>Login to continue chatting</p>
+
+    <input type="text" id="loginName" placeholder="Enter your name">
+
+    <button onclick="login()">
+        <i class="fas fa-right-to-bracket"></i> Login
+    </button>
+</div>
+
+<div id="chatPage" class="app hidden">
+
+    <header class="header">
+        <div class="title">
+            <i class="fas fa-comments"></i>
+            Reliable Chat Room
+        </div>
+        <div id="currentUser" class="user-tag"></div>
+    </header>
+
+    <div class="status-bar" id="statusBar"></div>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <div class="controls">
+        <input type="text" id="messageInput" placeholder="Type a message...">
+
+        <div class="btn-row">
+            <button class="send" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i> Send
+            </button>
+
+            <button class="offline" onclick="goOffline()">
+                <i class="fas fa-user-slash"></i> Offline
+            </button>
+
+            <button class="online" onclick="goOnline()">
+                <i class="fas fa-user-check"></i> Online
+            </button>
+
+            <button class="logout" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
